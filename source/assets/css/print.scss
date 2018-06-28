@@ -1,0 +1,221 @@
+@import "variables";
+@import "utilities";
+
+body {
+  background: $page-background-print;
+  padding: 0;
+  margin: 0;
+}
+
+// Grid
+.container {
+  max-width: none !important;
+  margin: 0;
+}
+
+.main, .sidebar {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.sidebar {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 297.3mm;
+  width: 25%;
+}
+
+.main {
+  width: 75%;
+  padding: rem2pt(1.75rem);
+}
+
+// Resume
+.resume {
+  display: table;
+  box-shadow: none;
+}
+
+// Profile
+.profile {
+  &__name {
+    font-size: rem2pt(1.2rem);
+  }
+
+  &__job-title {
+    font-size: rem2pt(0.8rem);
+  }
+}
+
+// Social
+.social {
+  padding: rem2pt(0.65rem);
+
+  &__item {
+    display: table;
+    font-size: rem2pt(0.65rem);
+    font-weight: 400;
+
+    .feather {
+      width: rem2pt(1rem);
+    }
+  }
+
+  &__link {
+    padding-left: 0.45rem;
+    display: table-cell;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+}
+
+// Info block
+.info-block {
+  padding: rem2pt(0.65rem);
+  font-weight: 400;
+
+  &__title {
+    font-size: rem2pt(0.75rem);
+  }
+
+  &__item {
+    font-size: rem2pt(0.65rem);
+  }
+}
+
+// Section
+.section {
+  & + & {
+    margin-top: rem2pt(1.5rem);
+  }
+
+  &__title {
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+    font-size: rem2pt(0.9rem);
+  }
+
+  &__icon {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+    .feather {
+      margin-top: 2px;
+      margin-bottom: -2px;
+      width: rem2pt(0.9rem);
+    }
+  }
+
+  &__title-text {
+    padding-left: 0.5rem;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  &__text {
+    font-size: rem2pt(0.7rem);
+    font-weight: 400;
+
+    & + .projects {
+      margin-top: rem2pt(0.5rem);
+    }
+  }
+}
+
+// Experience
+.experience {
+  &__item {
+    & + & {
+      margin-top: rem2pt(1.5rem);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__meta-row {
+    display: table;
+    width: 100%;
+  }
+
+  &__job-title,
+  &__time {
+    display: table-cell;
+  }
+
+  &__job-title {
+    font-size: rem2pt(0.75rem);
+  }
+
+  &__time {
+    text-align: right;
+    font-size: rem2pt(0.7rem);
+  }
+
+  &__company,
+  &__details,
+  &__tech {
+    font-size: rem2pt(0.7rem);
+  }
+}
+
+// Projects
+.projects {
+  &__title,
+  &__item {
+    font-size: rem2pt(0.7rem);
+    font-weight: 400;
+  }
+}
+
+// Skills
+.skills {
+  &__item {
+    display: table;
+    width: 100%;
+    margin-top: rem2pt(0.15rem);
+  }
+
+  &__name {
+    width: 30%;
+    display: table-cell;
+    font-size: rem2pt(0.7rem);
+  }
+
+  &__progress {
+    display: table-cell;
+    text-align: right;
+    width: 100%;
+    height: rem2pt(0.6rem);
+  }
+}
+
+// Footer
+.footer {
+  padding: 0 10mm;
+  text-align: left;
+
+  &--contrib {
+    display: none;
+  }
+}
+
+// Agreements
+.agreements {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  right: 0;
+  padding: 0 rem2pt(1.75rem);
+  display: block;
+  font-weight: 300;
+  font-size: rem2pt(0.5rem);
+}
+
+// Download
+.download {
+  display: none;
+}

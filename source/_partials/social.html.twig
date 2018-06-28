@@ -1,0 +1,37 @@
+{% if site.social|length > 0 %}
+    <div class="social">
+        <ul class="social__list">
+            {% for contact in site.social %}
+                <li class="social__item">
+                    {% if contact.icon is defined %}
+                        <span data-feather="{{ contact.icon }}"></span>
+                    {% elseif site.defaults.social[contact.type]['icon'] is defined %}
+                        <span data-feather="{{ site.defaults.social[contact.type]['icon'] }}"></span>
+                    {% endif %}
+
+                    {% if 'phone' == contact.type %}
+                        {% set itemprop = 'telephone' %}
+                    {% elseif 'email' == contact.type %}
+                        {% set itemprop = 'email' %}
+                    {% elseif 'web' == contact.type %}
+                        {% set itemprop = 'url' %}
+                    {% else %}
+                        {% set itemprop = null %}
+                    {% endif %}
+
+                    <a href="{{ site.defaults.social[contact.type]['url_prefix'] is defined ? site.defaults.social[contact.type]['url_prefix'] : '' }}{{ contact.account|replace({' ': ''}) }}" class="social__link">
+                        {%- if itemprop -%}
+                            <span itemprop="{{ itemprop }}">
+                        {%- endif -%}
+
+                                {{- site.defaults.social[contact.type]['profile_prefix'] is defined ? site.defaults.social[contact.type]['profile_prefix'] : '' }}{{ contact.account -}}
+
+                        {%- if itemprop -%}
+                            </span>
+                        {%- endif -%}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

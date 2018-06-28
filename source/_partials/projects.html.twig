@@ -1,0 +1,26 @@
+{% extends 'section.html.twig' %}
+
+{% block section_class %}projects{% endblock %}
+
+{% block section_text %}{{ site.projects.intro }}{% endblock %}
+
+{% block section_content %}
+    <ul class="projects">
+        {% for project in site.projects.list %}
+            <li class="projects__item">
+                        <span class="projects__title">
+                            {%- if project.url is defined -%}
+                            <a href="{{ project.url }}" class="projects__link" target="_blank">
+                            {%- endif -%}
+
+                                {{- project.name -}}
+
+                                {%- if project.url is defined -%}
+                                </a>
+                            {%- endif -%}
+                        </span>
+                <span class="projects__tagline">{{ project.tagline }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

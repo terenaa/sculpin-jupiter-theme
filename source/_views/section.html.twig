@@ -1,0 +1,22 @@
+{% set section_class = block('section_class') %}
+{% if site[section_class] %}
+    <section class="section">
+        <header class="section__header">
+            <h2 class="section__title">
+                {% if site.defaults[section_class].icon %}
+                    <span class="section__icon">
+                        <span data-feather="{{ site.defaults[section_class].icon }}" aria-hidden="true"></span>
+                    </span>
+                {%- endif %}
+                <span class="section__title-text">{{ site.defaults[section_class].section_title }}</span>
+            </h2>
+        </header>
+
+        {% set section_text = block('section_text') %}
+        {% if section_text %}
+            <div class="section__text"><p>{{ section_text|raw }}</p></div>
+        {% endif %}
+
+        {% block section_content %}{% endblock %}
+    </section>
+{% endif %}

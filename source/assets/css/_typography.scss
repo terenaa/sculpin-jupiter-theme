@@ -1,0 +1,18 @@
+body {
+  font: normal $page-font-size 'Raleway', sans-serif;
+  background: $page-background;
+
+  @media screen and (min-width: $size-lgp) {
+    padding: 2rem 0 1rem;
+  }
+}
+
+a {
+  color: $primary-color;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $primary-color;
+  }
+}

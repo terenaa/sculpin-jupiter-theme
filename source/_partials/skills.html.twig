@@ -1,0 +1,14 @@
+{% extends 'section.html.twig' %}
+
+{% block section_class %}skills{% endblock %}
+
+{% block section_content %}
+    <ul class="skills">
+        {% for skill in site.skills %}
+            <li class="skills__item">
+                <strong class="skills__name">{{ skill.name }}</strong>
+                <progress class="progress skills__progress" value="{{ skill.level }}" max="100"></progress>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,5 @@
+@import "strip-unit";
+
+@function rem2pt($size) {
+  @return strip-unit($size) * strip-unit($page-font-size) * 0.75pt;
+}

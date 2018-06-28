@@ -1,0 +1,14 @@
+{% if site.languages|length > 0 %}
+    <section class="info-block">
+        <header>
+            <h2 class="info-block__title">{{ site.defaults.languages.section_title }}</h2>
+        </header>
+        <ul class="info-block__list">
+            {% for language in site.languages %}
+                <li class="info-block__item language">
+                    {{- language.name }} <span class="language__level">({{ language.level }})</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endif %}

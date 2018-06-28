@@ -1,0 +1,70 @@
+name: John Doe
+job_title: Software Developer
+lang: en
+
+defaults:
+  present: present
+  social:
+    email:
+        url_prefix: 'mailto:'
+        icon: mail
+    phone:
+      url_prefix: 'tel:'
+      icon: phone
+    web:
+      url_prefix: 'https://'
+      icon: globe
+    linkedin:
+      profile_prefix: linkedin.com/
+      url_prefix: 'https://www.linkedin.com/in/'
+      icon: linkedin
+    github:
+      profile_prefix: github.com/
+      url_prefix: 'https://github.com/'
+      icon: github
+    gitlab:
+      profile_prefix: gitlab.com/
+      url_prefix: 'https://gitlab.com/'
+      icon: gitlab
+    twitter:
+      profile_prefix: @
+      url_prefix: 'https://twitter.com/'
+      icon: twitter
+    facebook:
+      profile_prefix: fb.me/
+      url_prefix: 'https://www.facebook.com/'
+      icon: facebook
+  education:
+    section_title: Education
+    levels:
+      university: 'http://schema.org/CollegeOrUniversity'
+      high_school: 'http://schema.org/HighSchool'
+      elementary_school: 'http://schema.org/ElementarySchool'
+      middle_school: 'http://schema.org/MiddleSchool'
+      preschool: 'http://schema.org/Preschool'
+      school: 'http://schema.org/School'
+  languages:
+    section_title: Languages
+  interests:
+    section_title: Interests
+  career_profile:
+    section_title: 'Career profile'
+    icon: user
+  experience:
+    section_title: 'Experience'
+    icon: briefcase
+    tech: 'Used technologies:'
+  projects:
+    section_title: 'Projects'
+    icon: archive
+  skills:
+    section_title: 'Skills'
+    icon: code
+  pdf:
+    download:
+      enabled: true
+      text: Download as PDF
+      icon: download-cloud
+    agreements: 'Nulla fermentum tortor sem, at commodo massa scelerisque a. Cras consectetur convallis tristique. Mauris ac lacus non odio luctus fringilla non vitae tortor. Etiam commodo mauris nec purus consectetur, ac commodo dolor dignissim. Ut non commodo ex. Nunc condimentum est nibh, ac placerat nisl dignissim ac.'
+  robots:
+    allow_indexing: false

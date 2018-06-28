@@ -1,0 +1,32 @@
+.profile {
+  background: $sidebar-profile-background;
+
+  &__container {
+    text-align: center;
+    padding: 1.875em 1.25em 1.75em;
+  }
+
+  &__image {
+    border-radius: 50%;
+    margin-bottom: 0.75rem;
+  }
+
+  &__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    @media screen and (min-width: $size-sm + 1) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__job-title {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $sidebar-color-secondary;
+
+    @media screen and (min-width: $size-sm + 1) {
+      font-size: 0.8rem;
+    }
+  }
+}

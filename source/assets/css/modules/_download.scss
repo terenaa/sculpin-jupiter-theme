@@ -1,0 +1,29 @@
+.download {
+  margin: 2rem auto;
+  text-align: center;
+
+  @media screen and (min-width: $size-lgp) {
+    margin-top: 0;
+  }
+
+  &__button {
+    display: inline-flex;
+    padding: 0.5rem 0.75rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    color: $download-button-color;
+    background: $download-button-background;
+    box-shadow: 0 2px 4px $sidebar-profile-background;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $download-button-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+  }
+}

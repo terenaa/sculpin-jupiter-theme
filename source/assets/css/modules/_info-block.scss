@@ -1,0 +1,32 @@
+.info-block {
+  padding: 1.25em;
+
+  &:first-child {
+    @media screen and (min-width: $size-xs + 1) and (max-width: $size-sm) {
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+
+    @media screen and (min-width: $size-sm + 1) {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__list {
+    @extend %list-unstyled;
+  }
+
+  &__item {
+    font-size: 0.75rem;
+    font-weight: 300;
+
+    @media screen and (min-width: $size-sm + 1) {
+      font-size: 0.65rem;
+    }
+  }
+}

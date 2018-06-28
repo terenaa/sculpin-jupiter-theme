@@ -1,0 +1,42 @@
+.section {
+  & + & {
+    margin-top: 2.5rem;
+  }
+
+  &__header {
+    padding-bottom: 0.65rem;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    color: darken($primary-color, 10%);
+  }
+
+  &__icon {
+    background: $primary-color;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+
+    .feather {
+      stroke: $main-icon-color;
+      width: 0.8rem;
+    }
+  }
+
+  &__text {
+    @extend %text-default;
+
+    & + .projects {
+      margin-top: 1.5rem;
+    }
+  }
+}

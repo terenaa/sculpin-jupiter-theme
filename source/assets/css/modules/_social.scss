@@ -1,0 +1,39 @@
+.social {
+  padding: 1.25em;
+
+  &__list {
+    @extend %list-unstyled;
+  }
+
+  &__item {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width: $size-sm + 1) {
+      font-size: 0.65rem;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .feather {
+      flex-shrink: 0;
+      stroke-width: 1px;
+      stroke: $sidebar-color-primary;
+      width: 1rem;
+    }
+  }
+
+  &__link {
+    color: $sidebar-color-primary;
+    margin-left: 0.45rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $sidebar-color-primary;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{% spaceless %}
+<!doctype html>
+<html lang="{{ site.lang }}" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="{% if site.defaults.robots.allow_indexing %}index{% else %}noindex,nofollow{% endif %}">
+    <title>{{ site.name }} | {{ site.job_title }} | Resume</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{ theme_path('assets/plugins/spectre/css/spectre-custom.css') }}">
+    <link rel="stylesheet" href="{{ theme_path('assets/css/resume.css') }}">
+    <link rel="stylesheet" href="{{ theme_path('assets/css/print.css') }}" media="print">
+</head>
+<body>
+    <div class="container grid-lg" itemscope itemtype="http://schema.org/Person">
+        <div class="columns">
+            <div class="column col-12">
+                {# Download #}
+                {% include 'download.html.twig' %}
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column col-12">
+                <div class="columns resume">
+                    <aside class="sidebar column col-sm-12 col-md-5 col-xl-4 col-3">
+                        <div class="columns profile">
+                            <div class="column col-12">
+                                {# Profile #}
+                                {% include 'profile.html.twig' %}
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column col-xs-12 col-sm-6 col-12">
+                                {# Social #}
+                                {% include 'social.html.twig' %}
+                            </div>
+                            <div class="column col-xs-12 col-sm-6 col-12">
+                                {# Education #}
+                                {% include 'education.html.twig' %}
+
+                                {# Languages #}
+                                {% include 'languages.html.twig' %}
+
+                                {# Interests #}
+                                {% include 'interests.html.twig' %}
+                            </div>
+                        </div>
+                    </aside>
+                    <main class="main column col-sm-12 col-md-7 col-xl-8 col-9">
+                        {# Career profile #}
+                        {% include 'career_profile.html.twig' %}
+
+                        {# Experience #}
+                        {% include 'experience.html.twig' %}
+
+                        {# Projects #}
+                        {% include 'projects.html.twig' %}
+
+                        {# Skills #}
+                        {% include 'skills.html.twig' %}
+
+                        {# Data processing agreement #}
+                        {% include'agreements.html.twig' %}
+                    </main>
+                </div>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column col-12">
+                {# Contrib #}
+                {% include 'contrib.html.twig' %}
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ theme_path('assets/plugins/feather/js/feather-4.7.3.min.js') }}"></script>
+    <script>feather.replace()</script>
+</body>
+</html>
+{% endspaceless %}

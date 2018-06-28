@@ -1,0 +1,104 @@
+imports:
+  - sculpin_site.yml
+
+# Email, phone, web, linkedin, github, twitter, gitlab, facebook
+social:
+  -
+    type: email
+    account: test@example.com
+  -
+    type: phone
+    account: +44 01234567890
+  -
+    type: web
+    account: www.example.com
+  -
+    type: linkedin
+    account: abc
+  -
+    type: github
+    account: example
+  -
+    type: twitter
+    account: Example123
+  -
+    type: gitlab
+    account: example
+  -
+    type: facebook
+    account: example
+
+education:
+  -
+    degree: 'MEng in Software Engineering'
+    school_name: 'Test Univeristy'
+    level: university
+    from: 2010
+    to: 2015
+    present: false
+
+languages:
+  -
+    name: German
+    level: Native
+  -
+    name: English
+    level: Professional
+
+interests:
+  - Climbing
+  - Snowboarding
+  - Cooking
+
+career_profile: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non quam porta, auctor diam id, elementum orci. Curabitur nec tincidunt urna. Donec a ipsum neque. Praesent felis ligula, posuere in sem quis, lobortis sagittis sapien. Morbi quam nisl, consectetur at arcu id, pharetra efficitur risus. Proin id erat porta, lacinia sapien eu, convallis mauris. Maecenas vitae dapibus sem.'
+
+experience:
+  -
+    job_title: 'Software Developer'
+    from: 2010
+    to: 2012
+    present: true
+    company: Test
+    city: Sydney
+    details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non quam porta, auctor diam id, elementum orci. Curabitur nec tincidunt urna. Donec a ipsum neque. Praesent felis ligula, posuere in sem quis, lobortis sagittis sapien. Morbi quam nisl, consectetur at arcu id, pharetra efficitur risus. Proin id erat porta, lacinia sapien eu, convallis mauris. Maecenas vitae dapibus sem."
+    tech_tags: ['PHP', 'Hack']
+  -
+    job_title: 'Software Developer with long job title'
+    from: 2010
+    to: 2012
+    present: false
+    company: Test 2
+    city: Sydney
+    details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non quam porta, auctor diam id, elementum orci. Curabitur nec tincidunt urna. Donec a ipsum neque. Praesent felis ligula, posuere in sem quis, lobortis sagittis sapien. Morbi quam nisl, consectetur at arcu id, pharetra efficitur risus. Proin id erat porta, lacinia sapien eu, convallis mauris. Maecenas vitae dapibus sem.'
+
+projects:
+  intro: 'Nulla fermentum tortor sem, at commodo massa scelerisque a. Cras consectetur convallis tristique. Mauris ac lacus non odio luctus fringilla non vitae tortor. Etiam commodo mauris nec purus consectetur, ac commodo dolor dignissim. Ut non commodo ex. Nunc condimentum est nibh, ac placerat nisl dignissim ac.'
+  list:
+    -
+      name: 'Velocity'
+      url: '#'
+      tagline: 'A responsive website template designed to help startups promote, market and sell their products.'
+    -
+      name: 'Velocity'
+      tagline: 'A responsive website template designed to help startups promote, market and sell their products.'
+
+# Max level: 100
+skills:
+  -
+    name: 'Python & Django'
+    level: 98
+  -
+    name: 'Javascript & jQuery'
+    level: 50
+  -
+    name: 'Angular'
+    level: 30
+  -
+    name: 'HTML5 & CSS'
+    level: 78
+  -
+    name: 'Ruby on Rails'
+    level: 87
+  -
+    name: 'Sketch & Photoshop'
+    level: 35

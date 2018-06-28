@@ -1,0 +1,5 @@
+@import "strip-unit";
+
+@function px2pt($size) {
+  @return strip-unit($size) * 0.75pt;
+}

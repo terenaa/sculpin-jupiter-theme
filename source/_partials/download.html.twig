@@ -1,0 +1,8 @@
+{% if site.pdf.download.enabled ?? site.defaults.pdf.download.enabled %}
+    <div class="download">
+        <a href="files/resume.pdf" class="download__button" download>
+            <span data-feather="{{ site.defaults.pdf.download.icon }}" aria-hidden="true" class="download__icon"></span>
+            <span>{{ site.defaults.pdf.download.text }}</span>
+        </a>
+    </div>
+{% endif %}

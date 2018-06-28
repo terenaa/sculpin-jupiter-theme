@@ -1,0 +1,33 @@
+{% extends 'section.html.twig' %}
+
+{% block section_class %}experience{% endblock %}
+
+{% block section_content %}
+    <ul class="experience">
+        {% for job in site.experience %}
+            <li class="experience__item" {% if job.present %}itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"{% endif %}>
+                <div class="experience__meta-row">
+                    <h3 class="experience__job-title">{{ job.job_title }}</h3>
+                    <div class="experience__time">{{ job.from }} - {{ job.present ? site.defaults.present : job.to }}</div>
+                </div>
+                <div class="experience__company">
+                    <span itemprop="name">{{ job.company }}</span>
+
+                    {%- if job.city is defined -%}
+                        , <span {% if job.present %}itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"{% endif %}>
+                                <span {% if job.present %}itemprop="addressLocality"{% endif %}>{{ job.city }}</span>
+                            </span>
+                    {% endif %}
+                </div>
+                <div class="experience__details"><p>{{ job.details|replace({'\n': '</p><p>'})|striptags('<p>')|raw }}</p></div>
+
+                {% if job.tech_tags is defined %}
+                    <div class="experience__tech">
+                        <strong class="experience__tech-title">{{ site.defaults.experience.tech }}</strong>
+                        <span>{{ job.tech_tags|join(', ') }}</span>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

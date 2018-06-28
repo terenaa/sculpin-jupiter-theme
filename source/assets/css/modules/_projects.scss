@@ -1,0 +1,24 @@
+.projects {
+  @extend %list-unstyled;
+  margin-top: 0;
+
+  &__item {
+    @extend %text-default;
+    @extend %list-item-spaced;
+  }
+
+  &__title {
+    font-size: 0.8rem;
+    color: $primary-color;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__tagline {
+    &:before {
+      content: '\00a0\2014\00a0';
+    }
+  }
+}

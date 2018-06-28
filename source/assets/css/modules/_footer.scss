@@ -1,0 +1,18 @@
+.footer {
+  text-align: center;
+  margin: 3em 0;
+
+  &__text {
+    font-weight: 300;
+    font-size: 0.6rem;
+    margin: 0;
+
+    .feather {
+      width: 0.7rem;
+      height: auto;
+      margin-bottom: -3px;
+      stroke: $footer-heart-color;
+      fill: $footer-heart-color;
+    }
+  }
+}

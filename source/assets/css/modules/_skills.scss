@@ -1,0 +1,44 @@
+.skills {
+  @extend %list-unstyled;
+  margin-top: 0;
+
+  &__item {
+    @extend %list-item-spaced;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+
+    @media screen and (min-width: $size-lg + 1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__progress {
+    color: $primary-color;
+    height: 0.6rem;
+    flex-basis: 100%;
+
+    &::-webkit-progress-bar {
+      background: transparent;
+    }
+
+    &::-webkit-progress-value {
+      background: $primary-color;
+    }
+
+    &::-moz-progress-bar {
+      background: $primary-color;
+    }
+
+    @media screen and (min-width: $size-lg + 1) {
+      flex-basis: 70%;
+    }
+  }
+}

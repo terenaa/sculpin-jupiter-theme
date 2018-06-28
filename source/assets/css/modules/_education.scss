@@ -1,0 +1,17 @@
+.education {
+  & + & {
+    margin-top: 1rem;
+  }
+
+  &__degree {
+    font-size: inherit;
+    font-weight: 600;
+    padding-bottom: 0.25rem;
+  }
+
+  &__school-name,
+  &__time {
+    color: $sidebar-color-secondary;
+    font-weight: 300;
+  }
+}

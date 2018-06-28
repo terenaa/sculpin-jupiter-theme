@@ -1,0 +1,51 @@
+.experience {
+  @extend %list-unstyled;
+  margin-top: 0;
+
+  &__item {
+    & + & {
+      margin-top: 1.5rem;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__meta-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__job-title {
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-bottom: 0.25em;
+    flex-basis: 65%;
+  }
+
+  &__time,
+  &__company {
+    color: $secondary-color;
+    font-weight: 300;
+    font-size: 0.7rem;
+  }
+
+  &__time {
+    flex-shrink: 0;
+  }
+
+  &__details {
+    @extend %text-default;
+    margin-top: 0.5rem;
+  }
+
+  &__tech {
+    @extend %text-default;
+  }
+
+  &__tech-title {
+    font-weight: 600;
+    padding-right: 0.25rem;
+  }
+}

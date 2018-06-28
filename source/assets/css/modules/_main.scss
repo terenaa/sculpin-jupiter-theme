@@ -1,0 +1,8 @@
+.main {
+  padding: 1.875em;
+  background: $main-background;
+
+  @media screen and (min-width: $size-md + 1) {
+    padding: 3.75em;
+  }
+}

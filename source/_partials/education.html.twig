@@ -1,0 +1,16 @@
+{% if site.education|length > 0 %}
+    <section class="info-block">
+        <header>
+            <h2 class="info-block__title">{{ site.defaults.education.section_title }}</h2>
+        </header>
+        <ul class="info-block__list">
+            {% for school in site.education %}
+                <li class="info-block__item education" itemprop="{% if school.current %}memberOf{% else %}alumniOf{% endif %}" itemscope itemtype="{{ site.defaults.education.levels[school.level] }}">
+                    <div class="education__degree">{{ school.degree }}</div>
+                    <div class="education__school-name" itemprop="name">{{ school.school_name }}</div>
+                    <div class="education__time">{{ school.from }} - {{ school.present ? site.defaults.present : school.to }}</div>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endif %}

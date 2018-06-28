@@ -1,0 +1,12 @@
+{% if site.interests|length > 0 %}
+    <section class="info-block">
+        <header>
+            <h2 class="info-block__title">{{ site.defaults.interests.section_title }}</h2>
+        </header>
+        <ul class="info-block__list">
+            {% for interest in site.interests %}
+                <li class="info-block__item">{{ interest }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endif %}

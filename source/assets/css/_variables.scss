@@ -1,0 +1,33 @@
+// Responsive breakpoints
+$size-xs: 480px;
+$size-sm: 600px;
+$size-md: 840px;
+$size-lg: 960px;
+$size-lgp: 966px;
+$size-xl: 1280px;
+$size-2x: 1440px;
+
+// Page
+$page-font-size: 16px;
+$page-background: #f5f5f5;
+$page-background-print: #fff;
+
+// The color of the template
+$primary-color: #5755d9;
+$secondary-color: #999;
+
+// Download
+$download-button-color: #fff;
+$download-button-background: $primary-color;
+
+// Sidebar
+$sidebar-profile-background: rgba(0, 0, 0, 0.1);
+$sidebar-color-primary: #fff;
+$sidebar-color-secondary: rgba(255, 2555, 255, 0.8);
+
+// Main
+$main-background: #fff;
+$main-icon-color: $main-background;
+
+// Footer
+$footer-heart-color: #ec8b71;
