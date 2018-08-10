@@ -19,7 +19,7 @@
                         {% set itemprop = null %}
                     {% endif %}
 
-                    <a href="{{ site.defaults.social[contact.type]['url_prefix'] is defined ? site.defaults.social[contact.type]['url_prefix'] : '' }}{{ contact.account|replace({' ': ''}) }}" class="social__link">
+                    <a href="{{ site.defaults.social[contact.type]['url_prefix'] is defined ? site.defaults.social[contact.type]['url_prefix'] : '' }}{{ contact.account|replace({' ': ''}) }}" class="social__link" {% if contact.type not in ['phone', 'email'] %}target="_blank"{% endif %}>
                         {%- if itemprop -%}
                             <span itemprop="{{ itemprop }}">
                         {%- endif -%}

@@ -49,7 +49,7 @@ body {
 
 // Social
 .social {
-  padding: rem2pt(0.65rem);
+  padding: rem2pt(0.65rem) rem2pt(1rem);
 
   &__item {
     display: table;
@@ -71,7 +71,7 @@ body {
 
 // Info block
 .info-block {
-  padding: rem2pt(0.65rem);
+  padding: rem2pt(0.65rem) rem2pt(1rem);
   font-weight: 400;
 
   &__title {
@@ -117,6 +117,7 @@ body {
   &__text {
     font-size: rem2pt(0.7rem);
     font-weight: 400;
+    line-height: rem2pt(1rem);
 
     & + .projects {
       margin-top: rem2pt(0.5rem);
@@ -128,12 +129,17 @@ body {
 .experience {
   &__item {
     & + & {
-      margin-top: rem2pt(1.5rem);
+      margin-top: rem2pt(1rem);
     }
 
     &:first-child {
       margin-top: 0;
     }
+  }
+
+  &__time,
+  &__company {
+    color: inherit;
   }
 
   &__meta-row {
@@ -159,6 +165,11 @@ body {
   &__details,
   &__tech {
     font-size: rem2pt(0.7rem);
+    line-height: rem2pt(1rem);
+  }
+
+  &__details > p {
+    margin-bottom: rem2pt(0.4rem);
   }
 }
 
@@ -168,6 +179,15 @@ body {
   &__item {
     font-size: rem2pt(0.7rem);
     font-weight: 400;
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__item {
+    margin-top: rem2pt(0.5rem);
+    line-height: rem2pt(1rem);
   }
 }
 
@@ -209,7 +229,7 @@ body {
   bottom: 0;
   left: 25%;
   right: 0;
-  padding: 0 rem2pt(1.75rem);
+  padding: 0 rem2pt(2.25rem);
   display: block;
   font-weight: 300;
   font-size: rem2pt(0.5rem);
